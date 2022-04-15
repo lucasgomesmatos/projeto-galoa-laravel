@@ -155,13 +155,7 @@ body {
 .rigth-header-item .select-language img {
   height: 2.2rem;
   width: 2.2rem;
-
 }
-
-/* .select-language img::before {
-  content: '';
-  width: .;
-} */
 
 .rigth-header-item .select-language select {
   width: 7.8rem;
@@ -203,6 +197,28 @@ body {
 .rigth-header-item .apresention-image-user {
   padding-left: 1rem;
   height: 3rem;
+  position: relative;
+}
+
+.apresention-image-user::after {
+  content: "2";
+  width: 1.2rem;
+  height: 1.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  right: -3.14%;
+  top: -5%;
+  background: var(--danger);
+  color: var(--white);
+  border-radius: 50%;
+  font-family: var(--roboto);
+  font-size: 1rem;
+  font-weight: 700;
+  font-size: 10px;
+  line-height: 12px;
+  z-index: 100;
 }
 
 /* Content */
@@ -421,6 +437,7 @@ body {
 
 .abstract-text {
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   max-width: 102.8rem;
@@ -432,6 +449,26 @@ body {
   line-height: 2.3rem;
   letter-spacing: 0.02em;
   color: var(--gray-details-p);
+  gap: 1rem;
+}
+
+.show-abstract-text {
+  color: var(--orange);
+  cursor: pointer;
+  font-family: var(--quicksand);
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 152.34%;
+  letter-spacing: 0.02em;
+}
+
+.abstract-text .show-text{
+  display: none;
+}
+
+.abstract-text .show-text.active{
+  display: block;
 }
 
 /* Discussões */
@@ -761,12 +798,42 @@ footer img {
 }
 
 @media (max-width: 960px) {
+  .name-event {
+    position: relative;
+  }
+
+  .side-menu-xl .name-event::after {
+    content: "";
+    position: absolute;
+    right: 2rem;
+    width: 2rem;
+    height: 2rem;
+    background: url("../images/list.svg") no-repeat;
+    display: block;
+    cursor: pointer;
+  }
+
+  .side-menu-xl .name-event.active::after {
+    content: "";
+    position: absolute;
+    right: 2rem;
+    width: 2rem;
+    height: 2rem;
+    background: url("../images/x-lg.svg") no-repeat;
+    display: flex;
+    cursor: pointer;
+  }
+
   .content {
     max-width: 48rem;
     height: auto;
   }
 
   .side-menu-xl .side-bar-xl ul {
+    display: none;
+  }
+
+  .side-menu-xl .side-bar-xl.active ul {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -774,6 +841,7 @@ footer img {
     gap: 2rem;
     height: auto;
     margin: 2rem 0;
+    transition: 0.8s ease-in-out;
   }
 
   .intro-title h1 {

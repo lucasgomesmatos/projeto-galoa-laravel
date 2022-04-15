@@ -6,35 +6,36 @@
 @endsection
 
 @section('content')
-  {{-- Responsivo --}}
+    {{-- Responsivo --}}
     <section class="side-menu-xl">
-      <div class="name-event">
-        <h1>SLACA 2019</h1>
-      </div>
-      <nav class="side-bar-xl">
-        <ul>
-            <li class="link-menu"><a href="">Apresentação</a></li>
-            <li class="link-menu"><a href="">Comitês</a></li>
-            <li class="link-menu"><a href="">Autores</a></li>
-            <li class="link-menu"><a href="">Eixos temáticos</a></li>
-            <li class="link-menu active"><a href="">Trabalhos</a></li>
-            <li class="link-menu"><a href="">Contato</a></li>
-        </ul>
-    </nav>
+        <div class="name-event">
+            <h1>SLACA 2019</h1>
+        </div>
+        <nav class="side-bar-xl">
+            <ul id="menu-list-xl">
+                <li class="link-menu"><a href="">Apresentação</a></li>
+                <li class="link-menu"><a href="">Comitês</a></li>
+                <li class="link-menu"><a href="">Autores</a></li>
+                <li class="link-menu"><a href="">Eixos temáticos</a></li>
+                <li class="link-menu "><a href="">Trabalhos</a></li>
+                <li class="link-menu"><a href="">Contato</a></li>
+            </ul>
+        </nav>
     </section>
     {{-- Normal --}}
     <section class="side-menu">
         <div class="name-event">
             <h1>SLACA 2019</h1>
         </div>
+
         <nav class="side-bar">
-            <ul>
+            <ul id="menu-list">
                 <li><img src="./assets/images/13-slaca.png" alt="Logo do evento 13 Slaca" class="logo-event"></li>
                 <li class="link-menu"><a href="">Apresentação</a></li>
                 <li class="link-menu"><a href="">Comitês</a></li>
                 <li class="link-menu"><a href="">Autores</a></li>
                 <li class="link-menu"><a href="">Eixos temáticos</a></li>
-                <li class="link-menu active"><a href="">Trabalhos</a></li>
+                <li class="link-menu"><a href="">Trabalhos</a></li>
                 <li class="link-menu"><a href="">Contato</a></li>
             </ul>
         </nav>
@@ -102,17 +103,17 @@
                                 allowfullscreen></iframe>
                         </div>
                         <div class="intro-buttons-cite-xl">
-                          <div class="buttons">
-                              <a href="" class="download"> <img src="./assets/images/download.svg"
-                                      alt="butão de download"> Download</a>
-                              <a href="" class="star"><img src="./assets/images/star.svg"
-                                      alt="butão de favorito"></a>
-                              <a href="" class="doi"><img src="./assets/images/doi.svg" alt="butão de doi"></a>
-                          </div>
-                          <div class="cite">
-                              <p>COMO CITAR ESSE TRABALHO?</p>
-                          </div>
-                      </div>
+                            <div class="buttons">
+                                <a href="" class="download"> <img src="./assets/images/download.svg"
+                                        alt="butão de download"> Download</a>
+                                <a href="" class="star"><img src="./assets/images/star.svg"
+                                        alt="butão de favorito"></a>
+                                <a href="" class="doi"><img src="./assets/images/doi.svg" alt="butão de doi"></a>
+                            </div>
+                            <div class="cite">
+                                <p>COMO CITAR ESSE TRABALHO?</p>
+                            </div>
+                        </div>
 
                         <div class="details">
                             <h2>Detalhes</h2>
@@ -161,7 +162,29 @@
                             sollicitudin ligula in
                             sapien scelerisque, ac gravida eros vestibulum. Etiam aliquam dictum nisl, vel aliquet enim
                             accumsan sit
-                            ametl accumsant... ver mais </p>
+                            ametl accumsant... <span class="show-abstract-text">ver mais</span></p>
+                        <div class="show-text">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus vitae turpis auctor,
+                                mollis
+                                felis ut,
+                                commodo turpis. Phasellus felis mauris, egestas eget cursus et, iaculis quis lacus. Fusce
+                                auctor
+                                eros sed
+                                magna ultricies gravida. Etiam aliquam dictum nisl, vel aliquet enim accumsan sit amet.
+                                Donec
+                                finibus nisi
+                                tellus, ut viverra lorem vestibulum ut. Phasellus condimentum orci id leo condimentum
+                                lobortis
+                                et non lorem.
+                                Sed id nisl metus. Quisque sollicitudin ligula in sapien scelerisque, ac gravida eros
+                                vestibulum
+                                Phasellus
+                                condimentum orci id leo condimentum lobortis et non lorem. Sed id nisl metus. Quisque
+                                sollicitudin ligula in
+                                sapien scelerisque, ac gravida eros vestibulum. Etiam aliquam dictum nisl, vel aliquet enim
+                                accumsan sit
+                                ametl accumsant</p>
+                        </div>
 
                     </div>
                 </section>
@@ -185,6 +208,9 @@
                                 criar tópico
                             </a>
                         </div>
+                    </div>
+                    <div class="discussions-container-form">
+                      
                     </div>
 
                     <section class="discussions-cards-container">
@@ -249,5 +275,5 @@
 @endsection
 
 @section('my-js')
-    <script type="module" src="{{ url(mix('assets/js/scripts.js')) }}"></script>
+    <script src="{{ url(mix('assets/js/scripts.js')) }}"></script>
 @endsection
