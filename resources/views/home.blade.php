@@ -210,7 +210,41 @@
                         </div>
                     </div>
                     <div class="discussions-container-form">
-                      
+                      <h4>Tem uma dúvida ou sugestão? Compartilhe seu feedback com os autores!</h4>
+                      <form>
+                        <div class="form-header">
+                          <label for="subject">Assunto</label>
+                          <input type="text" id="subject" placeholder="Defina um tópico sucinto para notificar os autores...">
+                        </div>
+                        <div class="form-footer">
+                          <label for="content">Conteúdo</label>
+                          <div class="group-textarea">
+                            <textarea name="" id="content"></textarea>
+                            <div class="icon-buttons-textarea">
+                              <div class="icon-buttons-left">
+                                <a href=""><img src="./assets/images/shape.svg" alt="Negrito"></a>
+                                <a href=""><img src="./assets/images/shape-i.svg" alt="Itálico"></a>
+                              </div>
+                              <a class="icon-buttons-rigth">
+                                Enviar
+                              </a>
+                            </div>
+                          </div>
+                        </div>
+                      </form>
+                      <div class="separator-cards"></div>
+                    </div>
+
+                    <div class="discussions-container-add-topic">
+                      <h3>Seu tópico foi enviado com sucesso! :D</h3>
+                      <p>Agradecemos por sua contribuição, uma notificação será enviada ao seu email assim que seu tópico for respondido!</p>
+                      <a href="" class="open-word">Descubra outros trabalhos!</a>
+                      <div class="discussions-button">
+                        <a href="" class="button-add">
+                            <img src="./assets/images/icon-add.svg" alt="Ícone de adicionar">
+                            criar novo tópico
+                        </a>
+                    </div>
                     </div>
 
                     <section class="discussions-cards-container">

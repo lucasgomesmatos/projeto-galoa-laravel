@@ -84,6 +84,62 @@ function responsiveXl() {
 
 /***/ }),
 
+/***/ "./resources/views/assets/js/modules/addDiscussions.js":
+/*!*************************************************************!*\
+  !*** ./resources/views/assets/js/modules/addDiscussions.js ***!
+  \*************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ addDiscussions)
+/* harmony export */ });
+function addDiscussions() {
+  var buttonAddTopic = document.querySelector(".button-add");
+
+  function addTopicCard() {}
+
+  function showDiscussions(e) {
+    e.preventDefault();
+    var showDiscussionsAdd = document.querySelector(".discussions-container-form");
+    var closeDiscussionsAdd = document.querySelector(".discussions-container");
+    showDiscussionsAdd.classList.add("active");
+    closeDiscussionsAdd.classList.add("remove");
+    var addTopic = document.querySelector('.icon-buttons-rigth');
+    addTopic.addEventListener('click', addTopicCard);
+  }
+
+  buttonAddTopic.addEventListener("click", showDiscussions);
+}
+
+/***/ }),
+
+/***/ "./resources/views/assets/js/modules/addTopic.js":
+/*!*******************************************************!*\
+  !*** ./resources/views/assets/js/modules/addTopic.js ***!
+  \*******************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ addTopicPrevent)
+/* harmony export */ });
+function addTopicPrevent() {
+  var removeTopic = document.querySelector('.icon-buttons-rigth');
+
+  function removeCardTopic(e) {
+    e.preventDefault();
+    var DiscussionsRemove = document.querySelector(".discussions-container-form");
+    var showSuccess = document.querySelector(".discussions-container-add-topic");
+    DiscussionsRemove.classList.remove("active");
+    showSuccess.classList.add("active");
+  }
+
+  removeTopic.addEventListener('click', removeCardTopic);
+}
+
+/***/ }),
+
 /***/ "./resources/views/assets/js/modules/menuShow.js":
 /*!*******************************************************!*\
   !*** ./resources/views/assets/js/modules/menuShow.js ***!
@@ -175,6 +231,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _modules_activeLink__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/activeLink */ "./resources/views/assets/js/modules/activeLink.js");
 /* harmony import */ var _modules_activeLinkXl__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/activeLinkXl */ "./resources/views/assets/js/modules/activeLinkXl.js");
 /* harmony import */ var _modules_activeAbstract__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./modules/activeAbstract */ "./resources/views/assets/js/modules/activeAbstract.js");
+/* harmony import */ var _modules_addDiscussions__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./modules/addDiscussions */ "./resources/views/assets/js/modules/addDiscussions.js");
+/* harmony import */ var _modules_addTopic__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./modules/addTopic */ "./resources/views/assets/js/modules/addTopic.js");
+
+
 
 
 
@@ -183,6 +243,8 @@ __webpack_require__.r(__webpack_exports__);
 (0,_modules_activeLink__WEBPACK_IMPORTED_MODULE_1__["default"])();
 (0,_modules_activeLinkXl__WEBPACK_IMPORTED_MODULE_2__["default"])();
 (0,_modules_activeAbstract__WEBPACK_IMPORTED_MODULE_3__["default"])();
+(0,_modules_addDiscussions__WEBPACK_IMPORTED_MODULE_4__["default"])();
+(0,_modules_addTopic__WEBPACK_IMPORTED_MODULE_5__["default"])();
 })();
 
 /******/ })()

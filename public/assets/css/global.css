@@ -13,8 +13,11 @@
     /* Gradient Colors*/
     --linear-orange-m: #ffb354;
     --linear-orange-b: #ee7a3a;
+    --linear-orange-topic-add: #F48F44;
 
     --linear-orange-button: #f0813d;
+    --linear-orange-button-topic: #feb154;
+    --linear-orange-button-topic-2: #f1833e;
 
     /* Gradient Colors Active*/
     --linear-orange-active-m: #ffb455;
@@ -34,6 +37,8 @@
     --gray-details-u: #ada0a0;
     --gray-question: #4d4d4d;
     --gray-like: #757575;
+    --gray-p-add: #595959;;
+    --textearea-footer: #EAF1F2;
 
     /* 1rem = 16px (USER Agent) = 100% (USER Agent) */
     font-size: 62.5%; /* 10px */
