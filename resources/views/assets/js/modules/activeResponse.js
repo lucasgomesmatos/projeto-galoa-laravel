@@ -3,9 +3,7 @@ export default function responseCard() {
 
   function activeResponse(e) {
     e.preventDefault()
-
     const responseAutors = document.querySelectorAll(".card-reponse-autor");
-
     responseAutors.forEach((item) => {
       item.classList.toggle("active");
     })

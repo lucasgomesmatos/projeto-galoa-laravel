@@ -1,5 +1,5 @@
 export default function responsiveXl() {
-  const menuList = document.querySelectorAll("#menu-list-xl .link-menu");
+  const menuList = document.querySelectorAll("#menu-list-responsive .link-menu");
   menuList[0].classList.add("active");
 
   function removeLink(e) {

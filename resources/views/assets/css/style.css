@@ -3,8 +3,6 @@ body {
   grid-template-columns: 22rem 1fr;
 }
 
-/* Slide Bar */
-
 .side-menu {
   position: fixed;
   grid-column: 1 / 2;
@@ -31,7 +29,6 @@ body {
   color: var(--white);
 }
 
-/* Side Menu Event */
 .side-bar {
   display: flex;
   width: 100%;
@@ -52,6 +49,7 @@ body {
   border-bottom: 2px solid var(--gray);
   padding: 0.7rem 2.4rem;
   position: relative;
+  cursor: pointer;
 }
 
 .side-bar ul li.active {
@@ -85,8 +83,6 @@ body {
   color: var(--gray-b);
 }
 
-/* Container-layout */
-
 .container-layout {
   grid-column: 2 / 3;
   display: flex;
@@ -95,8 +91,6 @@ body {
   flex-direction: column;
   width: 100%;
 }
-
-/* Header */
 
 .header-container {
   height: 6.8rem;
@@ -150,6 +144,8 @@ body {
   border: 1px solid var(--gray-select);
   border-radius: 0.3rem;
   position: relative;
+  gap: 0.5rem;
+  padding: 0 0.2rem;
 }
 
 .rigth-header-item .select-language img {
@@ -164,6 +160,8 @@ body {
   text-transform: uppercase;
   background: var(--orange-lite);
   appearance: none;
+  cursor: pointer;
+  outline: none;
 }
 
 .rigth-header-item .select-language .dropdown {
@@ -175,8 +173,6 @@ body {
   display: block;
   pointer-events: none;
 }
-
-/* User  */
 
 .rigth-header-item .user-apresention {
   display: flex;
@@ -220,8 +216,6 @@ body {
   line-height: 12px;
   z-index: 100;
 }
-
-/* Content */
 
 .content {
   max-width: 105.8rem;
@@ -283,6 +277,10 @@ body {
   gap: 0.5rem;
 }
 
+.download:hover {
+  background: var(--linear-orange-button-topic);
+}
+
 .buttons .star {
   width: 4.3rem;
   height: 3.1rem;
@@ -298,6 +296,10 @@ body {
   border-radius: 0.4rem;
 }
 
+.star:hover {
+  background: var(--linear-orange-button-topic);
+}
+
 .buttons .doi {
   width: 4.3rem;
   height: 3.1rem;
@@ -311,6 +313,10 @@ body {
   font-size: 1.6rem;
   font-weight: 500;
   border-radius: 0.4rem;
+}
+
+.doi:hover {
+  background: var(--linear-orange-button-topic);
 }
 
 .cite p {
@@ -407,8 +413,6 @@ body {
   color: var(--gray-details-u);
 }
 
-/* Abstract */
-
 .content .content-abstract {
   display: flex;
   max-width: 100%;
@@ -471,7 +475,6 @@ body {
   display: block;
 }
 
-/* Discussões */
 .content .content-discussions {
   display: flex;
   width: 100%;
@@ -569,6 +572,10 @@ body {
   background: var(--gray);
   position: absolute;
   z-index: -1;
+}
+
+.button-add:hover {
+  background: var(--linear-orange-button-topic);
 }
 
 .content .discussions-container-form {
@@ -673,6 +680,10 @@ body {
   cursor: pointer;
 }
 
+.icon-buttons-rigth:hover {
+  background: var(--linear-orange-button-topic);
+}
+
 .separator-cards {
   width: 100%;
   height: 0.1rem;
@@ -721,7 +732,7 @@ body {
   color: var(--linear-orange-topic-add);
 }
 
-.discussions-container-add-topic .button-add {
+.discussions-container-add-topic .button-add-topic {
   padding: 0.8rem 3rem;
   background: linear-gradient(180deg, #feb254 0%, #f0813d 100%);
   color: var(--white);
@@ -738,6 +749,10 @@ body {
   line-height: 1.6rem;
   position: relative;
   margin-bottom: 1.5rem;
+}
+
+.button-add-topic:hover {
+  background: var(--linear-orange-button-topic);
 }
 
 .discussions-cards-container .card-topic {
@@ -840,6 +855,10 @@ body {
   border-radius: 0.2rem;
 }
 
+.like-button:hover {
+  background: var(--linear-orange-button-topic);
+}
+
 .card-footer p {
   font-family: var(--segoe_ui);
   font-weight: 350;
@@ -857,7 +876,7 @@ body {
   justify-content: center;
   background: var(--gray);
   width: 100%;
-  border-top: .1rem solid var(--gray-select);
+  border-top: 0.1rem solid var(--gray-select);
 }
 .card-reponse-autor .name-question {
   display: flex;
@@ -910,7 +929,7 @@ footer img {
   display: block;
 }
 
-.intro-buttons-cite-xl {
+.intro-buttons-cite-responsive {
   display: none;
 }
 
@@ -924,47 +943,40 @@ footer img {
   .container-layout {
     grid-column: 1 / 3;
   }
-
+  
   .side-menu {
-    grid-column: 1 / 3;
-    position: absolute;
-    opacity: 0;
-    top: 0;
-    left: 0;
+    display: none;
   }
 
-  .side-menu-xl {
+  .side-menu-responsive {
     display: flex;
     flex-direction: column;
     grid-column: 1 / 3;
     width: 100%;
   }
-  .side-menu-xl .name-event {
+  .side-menu-responsive .name-event {
     max-width: 100%;
     height: 6.8rem;
   }
 
-  .side-menu-xl .side-bar-xl ul {
+  .side-menu-responsive .side-bar-responsive ul {
     display: flex;
     align-items: center;
     justify-content: center;
     height: 8rem;
     gap: 2rem;
   }
-  .side-bar-xl ul li:nth-child(1) {
-    border: none;
-  }
 
-  .side-menu-xl ul li.link-menu {
+  .side-menu-responsive ul li.link-menu {
     padding: 0.7rem 2.4rem;
     position: relative;
   }
 
-  .side-bar-xl ul li.active {
+  .side-bar-responsive ul li.active {
     background: var(--orange-lite);
   }
 
-  .side-bar-xl ul li.active::before {
+  .side-bar-responsive ul li.active::before {
     content: "";
     height: 0.5rem;
     width: 100%;
@@ -978,7 +990,7 @@ footer img {
     );
   }
 
-  .side-bar-xl ul li a {
+  .side-bar-responsive ul li a {
     height: 3.5rem;
     width: 100%;
     font-family: var(--quicksand);
@@ -1038,11 +1050,11 @@ footer img {
     display: none;
   }
 
-  .intro-buttons-cite-xl {
+  .intro-buttons-cite-responsive {
     display: flex;
     flex-direction: column;
   }
-  .intro-buttons-cite-xl .buttons {
+  .intro-buttons-cite-responsive .buttons {
     display: flex;
     gap: 0.5rem;
   }
@@ -1076,7 +1088,7 @@ footer img {
     position: relative;
   }
 
-  .side-menu-xl .name-event::after {
+  .side-menu-responsive .name-event::after {
     content: "";
     position: absolute;
     right: 2rem;
@@ -1087,7 +1099,7 @@ footer img {
     cursor: pointer;
   }
 
-  .side-menu-xl .name-event.active::after {
+  .side-menu-responsive .name-event.active::after {
     content: "";
     position: absolute;
     right: 2rem;
@@ -1103,11 +1115,11 @@ footer img {
     height: auto;
   }
 
-  .side-menu-xl .side-bar-xl ul {
+  .side-menu-responsive .side-bar-responsive ul {
     display: none;
   }
 
-  .side-menu-xl .side-bar-xl.active ul {
+  .side-menu-responsive .side-bar-responsive.active ul {
     display: flex;
     flex-direction: column;
     align-items: center;
