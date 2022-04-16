@@ -1,15 +1,29 @@
 export default function addTopicPrevent() {
-  const removeTopic = document.querySelector('.icon-buttons-rigth');
+  const removeTopic = document.querySelector(".icon-buttons-rigth");
+
+
 
   function removeCardTopic(e) {
     e.preventDefault();
-    const DiscussionsRemove = document.querySelector(".discussions-container-form");
-    const showSuccess = document.querySelector(".discussions-container-add-topic");
+    const discussionsRemove = document.querySelector(
+      ".discussions-container-form"
+    );
+    const showSuccess = document.querySelector(
+      ".discussions-container-add-topic"
+    );
 
-    DiscussionsRemove.classList.remove("active");
+    const cardAddSucess = document.querySelector(
+      ".discussions-cards-container .card-sucess"
+    );
+
+    discussionsRemove.classList.remove("active");
     showSuccess.classList.add("active");
+    cardAddSucess.classList.add("active");
+
+
+
+
   }
 
-  removeTopic.addEventListener('click', removeCardTopic)
-
+  removeTopic.addEventListener("click", removeCardTopic);
 }

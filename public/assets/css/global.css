@@ -37,7 +37,8 @@
     --gray-details-u: #ada0a0;
     --gray-question: #4d4d4d;
     --gray-like: #757575;
-    --gray-p-add: #595959;;
+    --gray-p-add: #595959;
+    --gray-p-sucess: #707070;
     --textearea-footer: #EAF1F2;
 
     /* 1rem = 16px (USER Agent) = 100% (USER Agent) */

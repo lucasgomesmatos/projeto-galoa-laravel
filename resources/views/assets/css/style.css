@@ -458,7 +458,7 @@ body {
   font-family: var(--quicksand);
   font-style: normal;
   font-weight: 700;
-  font-size: 14px;
+  font-size: 1.4rem;
   line-height: 152.34%;
   letter-spacing: 0.02em;
 }
@@ -709,7 +709,6 @@ body {
   font-size: 1.4rem;
   line-height: 1.9rem;
   color: var(--gray-p-add);
-
 }
 .discussions-container-add-topic .open-word {
   margin: 3rem 0rem 4.7rem 0rem;
@@ -723,7 +722,7 @@ body {
 }
 
 .discussions-container-add-topic .button-add {
-  padding: .8rem 3rem;
+  padding: 0.8rem 3rem;
   background: linear-gradient(180deg, #feb254 0%, #f0813d 100%);
   color: var(--white);
   box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.12), 0px 2px 2px rgba(0, 0, 0, 0.24);
@@ -743,11 +742,54 @@ body {
 
 .discussions-cards-container .card-topic {
   width: 102.8rem;
+  gap: 10px;
   border: 1px solid var(--gray);
   box-shadow: 0px 0px 0.8rem rgba(0, 0, 0, 0.12);
   border-radius: 0.4rem;
-  padding: 1.7rem 2.5rem;
   margin-bottom: 1.7rem;
+}
+
+.card-sucess {
+  display: none;
+}
+
+.card-sucess.active {
+  display: flex;
+  padding: 2rem;
+  border: 1px solid var(--gray);
+  box-shadow: 0px 0px 0.8rem rgba(0, 0, 0, 0.12);
+  border-radius: 0.4rem;
+  margin-bottom: 1.7rem;
+}
+
+.card-sucess .sucess-card {
+  width: 100%;
+  height: 100%;
+  gap: 0.8rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.sucess-card p {
+  text-align: center;
+  font-family: var(--quicksand);
+  font-style: normal;
+  font-weight: 700;
+  font-size: 1.6rem;
+  line-height: 2rem;
+  color: var(--gray-p-sucess);
+}
+
+.sucess-card a {
+  font-family: var(--segoe_ui);
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.4rem;
+  line-height: 1.9rem;
+  text-decoration-line: underline;
+  color: var(--linear-orange-active-b);
 }
 
 .card-header .subject {
@@ -757,6 +799,7 @@ body {
   font-size: 1.6rem;
   line-height: 2rem;
   color: var(--orange);
+  padding: 1.7rem 0 0 2.5rem;
 }
 
 .card-header .name-question {
@@ -766,6 +809,7 @@ body {
   font-size: 1.2rem;
   line-height: 1.5rem;
   color: var(--gray-details-p);
+  padding: 0 2.5rem;
 }
 
 .card-body .question {
@@ -775,12 +819,14 @@ body {
   font-size: 1.4rem;
   line-height: 1.8rem;
   color: var(--gray-question);
+  padding: 0 2.5rem;
 }
 
 .card-footer {
   margin-top: 1rem;
   display: flex;
   gap: 1.5rem;
+  padding: 0 0 1.7rem 2.5rem;
 }
 
 .card-footer .like-button {
@@ -800,6 +846,56 @@ body {
   font-size: 1.4rem;
   line-height: 1.9rem;
   color: var(--gray-like);
+}
+
+.card-reponse-autor {
+  display: none;
+}
+.card-reponse-autor.active {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: var(--gray);
+  width: 100%;
+  border-top: .1rem solid var(--gray-select);
+}
+.card-reponse-autor .name-question {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-family: var(--quicksand);
+  font-weight: 700;
+  font-size: 1.2rem;
+  line-height: 1.5rem;
+  color: var(--gray-details-p);
+  padding: 1.7rem 2.5rem 0 2.5rem;
+}
+
+.card-reponse-autor .strong-autor {
+  display: flex;
+  align-items: center;
+  gap: 1.4rem;
+  color: var(--orange);
+  cursor: pointer;
+  font-family: var(--quicksand);
+  font-style: normal;
+  font-weight: 700;
+  font-size: 1.4rem;
+  line-height: 152.34%;
+  letter-spacing: 0.02em;
+}
+
+.card-reponse-autor .question {
+  padding: 1rem 2.5rem 2.5rem 2.5rem;
+  font-family: var(--quicksand);
+  font-weight: 400;
+  font-size: 1.4rem;
+  line-height: 1.8rem;
+  color: var(--gray-question);
+}
+
+#reponse {
+  background: var(--white);
 }
 
 footer {
@@ -1046,6 +1142,10 @@ footer img {
     max-width: 34rem;
   }
 
+  .discussions-container-add-topic p {
+    width: 50%;
+  }
+
   .discussions-container-form form input::placeholder {
     font-size: 1rem;
   }
@@ -1105,6 +1205,11 @@ footer img {
   }
 
   .card-topic {
+    max-width: 22rem;
+    height: auto;
+  }
+
+  .card-sucess {
     max-width: 22rem;
     height: auto;
   }
