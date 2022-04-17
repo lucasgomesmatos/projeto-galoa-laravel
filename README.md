@@ -61,6 +61,6 @@
   php artisan serve
   ```
 
-<img src="./assets/images/preview-site.png" />
+<img src="public/assets/images/preview-site.png" />
 
 
