@@ -21,7 +21,6 @@
 #### Inicializando
 
 * Clone o projeto para seu repositório local.
-
 * Abre a cmd na pasta raiz do projeto e rode estes comandos.
 
   ```
@@ -29,14 +28,14 @@
 
   npm install
 
-  npm run dev
+  npm run dev 
 
   composer dump-autoload
 
   ```
 
 * Crie um arquivo com a extensão  **.env** ou simplesmente copie e cole do arquivo  **.env.example** .
-
+* Crie um banco de dados com o nome galoa ou de sua preverença, mas lembre-se de colocar no arquivo **.env** o mesmo nome.
 * Preencha os dados conforme seu banco de dados.
 
   ```
@@ -50,13 +49,13 @@
 
 
 
-* Rode o comando.
+* Rode o comando para gerar a APP_KEY do Laravel.
 
   ```
   php artisan key:generate
   ```
 
-* Rode o comando para ligar o servidor.
+* Rode o comando para ligar o servidor ou ligue seu servidor xamp por exemplo.
 
   ```
   php artisan serve
